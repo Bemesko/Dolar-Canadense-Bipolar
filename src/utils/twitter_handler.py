@@ -1,15 +1,14 @@
 import tweepy.error
 import json
 
-
-with open("src/utils/tweets.json", "r") as data_file:
-    datastore = json.load(data_file)
-
-
 class TwitterHandler():
     def __init__(self, auth, api):
         self.auth = auth
         self.api = api
+
+
+        with open("src/utils/tweets.json", "r") as data_file:
+            self.tweets_reactions = json.load(data_file)
 
         try:
             self.api.verify_credentials()
@@ -20,17 +19,13 @@ class TwitterHandler():
             raise tweepError
 
     def tweet_dollar_price(self, dollar_info):
-        self.api.update_status(f""" 
-        Dolar canadense {}: {dollar_info['ask']} às {dollar_info['create_date']}
-        
-        """+ datastore["good"][0]+"""
-        
+        self.api.update_status(f"""{subiu} Dolar canadense: {dollar_info['ask']} às {dollar_info['check_time']}  
+        {self.tweets_reactions['good'][0]}
         """)
-
 
 
 
 if __name__ == "__main__":
     # print("\N{grinning face}")
-    print(datastore["good"][0])
+    pass
         
