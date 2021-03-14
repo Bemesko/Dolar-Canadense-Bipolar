@@ -1,7 +1,7 @@
 import requests
 
 
-class MoneyApi():
+class MoneyAPI():
     def __init__(self):
         pass
 
@@ -15,5 +15,5 @@ class MoneyApi():
 
 
 if __name__ == "__main__":
-    money = MoneyApi()
+    money = MoneyAPI()
     money.request_money()
