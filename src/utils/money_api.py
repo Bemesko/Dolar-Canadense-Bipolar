@@ -3,17 +3,19 @@ import requests
 
 class MoneyAPI():
     def __init__(self):
-        pass
+        self.API_URL = "https://economia.awesomeapi.com.br/json/all/CAD"
+        self.SUCESS_STATUS_CODE = 200
 
     def request_money(self):
-        resp = requests.get('https://economia.awesomeapi.com.br/json/all/CAD')
-        if resp.status_code != 200:
-            # This means something went wrong.
+        resp = requests.get(self.API_URL)
+        if resp.status_code != self.SUCESS_STATUS_CODE:
             raise Exception  # ('GET /tasks/ {}'.format(resp.status_code))
-        for todo_item in resp.json().items():
-            print(todo_item)
+
+        dollar_info = resp.json()["CAD"]
+
+        return dollar_info
 
 
 if __name__ == "__main__":
-    money = MoneyAPI()
+    money = MoneyAPI() 
     money.request_money()

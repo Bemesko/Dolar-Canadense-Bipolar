@@ -14,5 +14,10 @@ class TwitterHandler():
             print("Erro na autenticação!")
             raise tweepError
 
-    def tweet_dollar_price(self, dollar_price):
-        self.api.update_status("")
+    def tweet_dollar_price(self, dollar_info):
+        self.api.update_status(
+            f"Dólar Canadense valendo: {dollar_info['ask']}")
+
+
+if __name__ == "__main__":
+    print("\N{grinning face}")
