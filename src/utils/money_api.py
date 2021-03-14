@@ -13,9 +13,13 @@ class MoneyAPI():
 
         dollar_info = resp.json()["CAD"]
 
+        check_time = dollar_info["create_date"].split(" ")[1].split(":")
+
+        dollar_info["check_time"] = f"{check_time[0]}:{check_time[1]}"
+
         return dollar_info
 
 
 if __name__ == "__main__":
-    money = MoneyAPI() 
-    money.request_money()
+    money = MoneyAPI()
+    print(money.request_money()["check_time"])
