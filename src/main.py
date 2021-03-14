@@ -1,6 +1,7 @@
 import tweepy
 import utils.auth_tokens as auth_tokens
-import utils.twitter_handler as twitter_handler
+import utils.twitter_handler as twitter_api_handler
+import utils.money_api as money_api
 
 # Authenticate to Twitter
 tweepy_auth = tweepy.OAuthHandler(auth_tokens.TWITTER_API_KEY,
@@ -11,14 +12,9 @@ tweepy_auth.set_access_token(auth_tokens.TWITTER_ACCESS_TOKEN,
 tweepy_api = tweepy.API(tweepy_auth, wait_on_rate_limit=True,
                         wait_on_rate_limit_notify=True)
 
-twitter_handler = twitter_handler.TwitterHandler(tweepy_auth, tweepy_api)
+twitter_handler = twitter_api_handler.TwitterHandler(tweepy_auth, tweepy_api)
 
-try:
-    tweepy_api.verify_credentials()
-    print("Authentication OK")
+money = money_api.MoneyAPI()
+dollar_info = money.request_money()
 
-    tweepy_api.update_status("Sorry")
-    print("Tweet Enviado!")
-except tweepy.error.TweepError as tweepError:
-    print("Error during authentication")
-    raise tweepError
+twitter_handler.tweet_dollar_price(dollar_info)
