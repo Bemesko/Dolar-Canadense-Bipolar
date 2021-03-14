@@ -1,28 +1,18 @@
+
 {
-    {
-        "status": "good",
-        "frases" : [
-            "que bom!",
-            "to feliz"
-        ]
-    }
-    {
-        "status": "very good",
-        "frases" : []
-    }
-    {
-        "status": "bad",
-        "frases" : []
-    }
-    {
-        "status": "very bad",
-        "frases" : []
-    }
+    "good" : [
+        "que bom!",
+        "to feliz"
+    ],
+    "very good" : [
+
+    ],
+    "bad" : [
+
+    ],
+    "very bad" : [
+
+    ]
 }
 
-// subiu + :) + preço + às horario + 
-
-// comentário +
-
-// variação emoji + % + (em real) +
 
