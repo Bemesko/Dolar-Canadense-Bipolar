@@ -2,10 +2,6 @@ import tweepy.error
 import json
 
 
-with open("src/utils/tweets.json", "r") as data_file:
-    datastore = json.load(data_file)
-
-
 class TwitterHandler():
     def __init__(self, auth, api):
         self.auth = auth
@@ -20,17 +16,19 @@ class TwitterHandler():
             raise tweepError
 
     def tweet_dollar_price(self, dollar_info):
-        self.api.update_status(f""" 
-        Dolar canadense {}: {dollar_info['ask']} às {dollar_info['create_date']}
-        
-        """+ datastore["good"][0]+"""
-        
-        """)
-
-
+        try:
+            self.api.update_status(f""" 
+            Dólar Canadense : {dollar_info['ask']} às {dollar_info['create_date']}
+            
+            """ + datastore["good"][0]+"""
+            
+            """)
+            print("Tweet Enviado com Sucesso!")
+        except Exception as e:
+            print(e)
+            raise e
 
 
 if __name__ == "__main__":
     # print("\N{grinning face}")
     print(datastore["good"][0])
-        
