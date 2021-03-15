@@ -6,16 +6,12 @@
             "Jóia"
         ],
         "emojis" : [
-            ":simple_smile:",
-            ":relaxed:",
-            ":smirk:",
-            ":relieved:",
-            ":wink:",
-            ":kissing:",
-            ":kissing_closed_eyes:",
-            ":innocent:"
+            ":grinning_face:",
+            ":slightly_smiling_face:",
+            ":smwinking_face",
+            ":kissing_face_with_smiling_eyes:",
+            ":winking_face:"
         ]
-
     }
     ,
     "very good" : {
@@ -23,20 +19,13 @@
             "Iupi!"
         ],
         "emojis": [
-            ":smile:",
-            ":laughing:",
-            ":blush:",
-            ":smiley:",
-            ":heart_eyes:",
-            ":kissing_heart:",
-            ":flushed:",
-            ":satisfied:",
-            ":stuck_out_tongue_winking_eye:",
-            ":stuck_out_tongue_closed_eyes:",
-            ":joy:",
-            ":sunglasses:",
-            ":yum:"
-
+            ":smiling_face_with_heart-eyes:",
+            ":smiling_face:",
+            ":beaming_face_with_smiling_eyes:",
+            ":squinting_face_with_tongue:",
+            ":hugging_face:",
+            ":partying_face:",
+            ":smiling_face_with_sunglasses:"
         ]
     },
     "bad" : {
