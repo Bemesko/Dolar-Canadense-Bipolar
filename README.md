@@ -4,7 +4,8 @@ Um bot open-source que de vez em quando tweeta a cotação do Dólar Canadense p
 
 Me veja em ação em [@dolarCA_bipolar](https://twitter.com/dolarCA_bipolar)
 
-<blockquote class="twitter-tweet"><p lang="pt" dir="ltr">🇨🇦 Subiu! 😯 - R$ 4.46 às 22:20 <br> <br>Triste<br><br>variação 📈 + 0.12% (R$ 0.54)</p>&mdash; Dólar Canadense Bipolar 🇨🇦 (@dolarCA_bipolar) <a href="https://twitter.com/dolarCA_bipolar/status/1371270326412263425?ref_src=twsrc%5Etfw">March 15, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a href="https://twitter.com/dolarCA_bipolar" target="blank"><img src="https://i.imgur.com/jt77CBd.png"></a>
+
 
 ## Instalando o Repositório
 
