@@ -3,12 +3,6 @@ import json
 import emoji
 
 
-<< << << < HEAD
-== == == =
-
->>>>>> > e538082bd99320bcd8c1a1259826b514f8e12ad8
-
-
 class TwitterHandler():
     def __init__(self, auth, api):
         self.auth = auth
@@ -55,4 +49,4 @@ class TwitterHandler():
 
 if __name__ == "__main__":
     # print("\N{grinning face}")
-    print(datastore["good"][0])
+    pass
