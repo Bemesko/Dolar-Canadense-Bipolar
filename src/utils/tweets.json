@@ -1,7 +1,7 @@
 
 {
     "good" : {
-        "frases" : [
+        "quotes" : [
             "Boa",
             "Jóia"
         ],
@@ -19,7 +19,7 @@
     }
     ,
     "very good" : {
-        "frases": [
+        "quotes": [
             "Iupi!"
         ],
         "emojis": [
@@ -40,7 +40,7 @@
         ]
     },
     "bad" : {
-        "frases": [
+        "quotes": [
             "Triste"
         ],
         "emojis": [
@@ -60,7 +60,7 @@
         ]
     },
     "very bad" : {
-        "frases": [
+        "quotes": [
             "Péssimo!"
         ],
         "emojis": [
