@@ -4,6 +4,9 @@ Um bot open-source que de vez em quando tweeta a cotação do Dólar Canadense p
 
 Me veja em ação em [@dolarCA_bipolar](https://twitter.com/dolarCA_bipolar)
 
+<a href="https://twitter.com/dolarCA_bipolar" target="blank"><img src="https://i.imgur.com/jt77CBd.png"></a>
+
+
 ## Instalando o Repositório
 
 1. Abra a linha de comando, entre na pasta raiz desse projeto e crie um ambiente virtual com `python -m venv venv`
