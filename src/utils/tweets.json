@@ -1,16 +1,84 @@
 
 {
-    "good" : [
-        "que bom!",
-        "to feliz"
-    ],
-    "very good" : [
+    "good" : {
+        "quotes" : [
+            "Boa",
+            "Jóia"
+        ],
+        "emojis" : [
+            ":simple_smile:",
+            ":relaxed:",
+            ":smirk:",
+            ":relieved:",
+            ":wink:",
+            ":kissing:",
+            ":kissing_closed_eyes:",
+            ":innocent:"
+        ]
 
-    ],
-    "bad" : [
+    }
+    ,
+    "very good" : {
+        "quotes": [
+            "Iupi!"
+        ],
+        "emojis": [
+            ":smile:",
+            ":laughing:",
+            ":blush:",
+            ":smiley:",
+            ":heart_eyes:",
+            ":kissing_heart:",
+            ":flushed:",
+            ":satisfied:",
+            ":stuck_out_tongue_winking_eye:",
+            ":stuck_out_tongue_closed_eyes:",
+            ":joy:",
+            ":sunglasses:",
+            ":yum:"
 
-    ],
-    "very bad" : [
-
-    ]
+        ]
+    },
+    "bad" : {
+        "quotes": [
+            "Triste"
+        ],
+        "emojis": [
+            ":frowning:",
+            ":grimacing:",
+            ":hushed:",
+            ":unamused:",
+            ":confused:",
+            ":sweat:",
+            ":pensive:",
+            ":disappointed:",
+            ":angry:",
+            ":no_mouth:",
+            ":innocent:",
+            ":sleepy:",
+            ":mask:"
+        ]
+    },
+    "very bad" : {
+        "quotes": [
+            "Péssimo!"
+        ],
+        "emojis": [
+            ":worried:",
+            ":confounded:",
+            ":fearful:",
+            ":disappointed_relieved:",
+            ":cold_sweat:",
+            ":weary:",
+            ":dizzy_face:",
+            ":cry:",
+            ":triumph:",
+            ":astonished:",
+            ":scream:",
+            ":persevere:",
+            ":rage:",
+            ":tired_face:",
+            ":anguished:"
+        ]
+    }
 }
