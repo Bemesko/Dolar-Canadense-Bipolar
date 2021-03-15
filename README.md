@@ -1,4 +1,4 @@
-# Dólar Canadense Bipolar
+# Dólar Canadense Bipolar v.1.0.0
 
 Um bot open-source que de vez em quando tweeta a cotação do Dólar Canadense para o Real!
 
