@@ -26,16 +26,29 @@ class TwitterHandler():
             rised = "Subiu!"
             reaction = self.tweets_reactions["bad"]["quotes"][0]
             emoji_reaction = self.tweets_reactions["bad"]["emojis"][2]
+            sign = "+"
+            chart = ":chart_increasing:"
         else:
             rised = "Caiu!"
             reaction = self.tweets_reactions["good"]["quotes"][0]
             emoji_reaction = self.tweets_reactions["good"]["emojis"][2]
+            sign = "-"
+            chart = ":chart_decreasing:"
 
         price = round(float(dollar_info['ask']), 2) 
-        self.api.update_status((emoji.emojize(f"""{rised} {emoji_reaction} - R$ {price} às {dollar_info['check_time']}  
+        price_rised = round(price * float(dollar_info['pctChange']), 2) 
+
+        tweet = (f"""
+{rised} {emoji_reaction} - R$ {price} às {dollar_info['check_time']}  
         
 {reaction}
-        """, use_aliases= True)))
+
+variação {chart} {sign} {dollar_info['pctChange']}% (R$ {price_rised})
+        """)
+
+        emojis_tweet = emoji.emojize(tweet, use_aliases= True)
+
+        self.api.update_status(emojis_tweet)
 
 
 #         texto = ":smile:"
