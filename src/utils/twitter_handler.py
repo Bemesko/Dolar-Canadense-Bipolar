@@ -34,19 +34,20 @@ class TwitterHandler():
                 sign = "-"
                 chart = ":chart_decreasing:"
 
-            price = round(float(dollar_info['ask']), 2) 
-            price_rised = round(price * float(dollar_info['pctChange']), 2) 
+            price = round(float(dollar_info['ask']), 2)
+            price_rised = round(price * float(dollar_info['pctChange']), 2)
 
             tweet = (f"""
-:Canada: {rised} {emoji_reaction} - R$ {price} às {dollar_info['check_time']}  
+:Canada: {rised} {emoji_reaction} - R${price} às {dollar_info['check_time']}  
         
 {reaction}
 
-variação {chart} {sign} {dollar_info['pctChange']}% (R$ {price_rised})""")
+Variação {chart} {sign} {abs(float(dollar_info['pctChange']))}% (R${abs(float(price_rised))})""")
 
-            emojis_tweet = emoji.emojize(tweet, use_aliases= True)
+            emojis_tweet = emoji.emojize(tweet, use_aliases=True)
 
             self.api.update_status(emojis_tweet)
+            print("Tweet enviado com sucesso!")
         except Exception as e:
             print(e)
             raise e
