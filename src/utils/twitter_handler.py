@@ -38,7 +38,7 @@ class TwitterHandler():
             price_rised = round(price * float(dollar_info['pctChange']), 2) 
 
             tweet = (f"""
-{rised} {emoji_reaction} - R$ {price} às {dollar_info['check_time']}  
+:Canada: {rised} {emoji_reaction} - R$ {price} às {dollar_info['check_time']}  
         
 {reaction}
 
