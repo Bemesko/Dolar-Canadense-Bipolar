@@ -13,8 +13,8 @@ class MoneyAPI():
 
         dollar_info = resp.json()["CAD"]
 
+        # adicionando um item que é só as horas e os minutos
         check_time = dollar_info["create_date"].split(" ")[1].split(":")
-
         dollar_info["check_time"] = f"{check_time[0]}:{check_time[1]}"
 
         return dollar_info

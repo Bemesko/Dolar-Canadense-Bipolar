@@ -33,19 +33,18 @@
             "Triste"
         ],
         "emojis": [
-            ":frowning:",
-            ":grimacing:",
-            ":hushed:",
-            ":unamused:",
-            ":confused:",
-            ":sweat:",
-            ":pensive:",
-            ":disappointed:",
-            ":angry:",
-            ":no_mouth:",
-            ":innocent:",
-            ":sleepy:",
-            ":mask:"
+            ":frowning_face_with_open_mouth:",
+            ":grimacing_face:",
+            ":hushed_face:",
+            ":unamused_face:",
+            ":confused_face:",
+            ":downcast_face_with_sweat:",
+            ":pensive_face:",
+            ":disappointed_face:",
+            ":angry_face:",
+            ":face_without_mouth:",
+            ":sleepy_face:",
+            ":face_with_medical_mask:"
         ]
     },
     "very bad" : {
@@ -53,21 +52,19 @@
             "Péssimo!"
         ],
         "emojis": [
-            ":worried:",
-            ":confounded:",
-            ":fearful:",
-            ":disappointed_relieved:",
-            ":cold_sweat:",
-            ":weary:",
-            ":dizzy_face:",
-            ":cry:",
-            ":triumph:",
-            ":astonished:",
-            ":scream:",
-            ":persevere:",
-            ":rage:",
-            ":tired_face:",
-            ":anguished:"
+            ":worried_face:",
+            ":confused_face:",
+            ":fearful_face:",
+            ":sad_but_relieved_face:",
+            ":anxious_face_with_sweat:",
+            ":weary_face:",
+            ":knocked_out_face:",
+            ":crying_face:",
+            ":face_with_steam_from_nose:",
+            ":face_screaming_in_fear:",
+            ":persevering_face:",
+            ":pouting_face:",
+            ":anguished_face:"
         ]
     }
 }
