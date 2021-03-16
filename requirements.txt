@@ -3,6 +3,7 @@ autopep8==1.5.5
 certifi==2020.12.5
 chardet==4.0.0
 colorama==0.4.4
+emoji==1.2.0
 idna==2.10
 isort==5.7.0
 lazy-object-proxy==1.5.2
