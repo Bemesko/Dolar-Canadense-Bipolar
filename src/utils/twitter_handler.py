@@ -1,6 +1,7 @@
 import tweepy.error
 import json
 import emoji
+import os
 
 
 class TwitterHandler():
@@ -8,7 +9,7 @@ class TwitterHandler():
         self.auth = auth
         self.api = api
 
-        with open("src/utils/tweets.json", "r") as data_file:
+        with open(os.path.join("src", "utils", "tweets.json"), "r") as data_file:
             self.tweets_reactions = json.load(data_file)
 
         try:

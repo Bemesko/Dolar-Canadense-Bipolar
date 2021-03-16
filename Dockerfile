@@ -9,5 +9,5 @@ COPY requirements.txt /tmp
 
 RUN pip3 install -r /tmp/requirements.txt
 
-WORKDIR /src
-CMD ["python3", "main.py"]
+WORKDIR /
+CMD ["python3", "src/main.py"]
