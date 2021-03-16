@@ -37,11 +37,12 @@ class TwitterHandler():
             chart = ":chart_decreasing:"
 
         price = round(float(dollar_info['ask']), 2)
-        price_rised = round(price * float(dollar_info['pctChange']), 2)
+        price_rised = abs(
+            round((price * float(dollar_info['pctChange'])/100), 2))
 
         tweet = (f"""
-:Canada: {rised} {emoji_reaction} - R${price} às {dollar_info['check_time']}  
-        
+:Canada: {rised} {emoji_reaction} - R${price} às {dollar_info['check_time']}
+
 {reaction}
 
 Variação {chart} {sign} {abs(float(dollar_info['pctChange']))}% (R${abs(float(price_rised))})""")
@@ -53,6 +54,7 @@ Variação {chart} {sign} {abs(float(dollar_info['pctChange']))}% (R${abs(float(
     def send_tweet(self, tweet):
         try:
             self.api.update_status(tweet)
+            print(tweet)
             print("Tweet enviado com sucesso!")
         except Exception as e:
             print(e)

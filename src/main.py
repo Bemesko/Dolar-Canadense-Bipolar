@@ -17,4 +17,5 @@ twitter_handler = twitter_api_handler.TwitterHandler(tweepy_auth, tweepy_api)
 money = money_api.MoneyAPI()
 dollar_info = money.request_money()
 
-print(twitter_handler.generate_tweet(dollar_info))
+tweet = twitter_handler.generate_tweet(dollar_info)
+twitter_handler.send_tweet(tweet)
