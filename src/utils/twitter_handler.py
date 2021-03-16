@@ -1,6 +1,7 @@
 import tweepy.error
 import json
 import emoji
+import random
 
 
 class TwitterHandler():
@@ -19,40 +20,40 @@ class TwitterHandler():
             print("Erro na autenticação!")
             raise tweepError
 
-    def tweet_dollar_price(self, dollar_info):
-        try:
-            if float(dollar_info['pctChange']) > 0:
-                rised = "Subiu!"
-                reaction = self.tweets_reactions["bad"]["quotes"][0]
-                emoji_reaction = self.tweets_reactions["bad"]["emojis"][2]
-                sign = "+"
-                chart = ":chart_increasing:"
-            else:
-                rised = "Caiu!"
-                reaction = self.tweets_reactions["good"]["quotes"][0]
-                emoji_reaction = self.tweets_reactions["good"]["emojis"][2]
-                sign = "-"
-                chart = ":chart_decreasing:"
+    def generate_tweet(self, dollar_info):
+        if float(dollar_info['pctChange']) > 0:
+            rised = "Subiu!"
+            reaction = self.tweets_reactions["bad"]["quotes"][0]
+            emoji_reaction = self.tweets_reactions["good"]["emojis"][random.randrange(
+                0, len(self.tweets_reactions["bad"]["emojis"])-1)]
+            sign = "+"
+            chart = ":chart_increasing:"
+        else:
+            rised = "Caiu!"
+            reaction = self.tweets_reactions["good"]["quotes"][0]
+            emoji_reaction = self.tweets_reactions["good"]["emojis"][random.randrange(
+                0, len(self.tweets_reactions["good"]["emojis"])-1)]
+            sign = "-"
+            chart = ":chart_decreasing:"
 
-            price = round(float(dollar_info['ask']), 2)
-            price_rised = round(price * float(dollar_info['pctChange']), 2)
+        price = round(float(dollar_info['ask']), 2)
+        price_rised = round(price * float(dollar_info['pctChange']), 2)
 
-            tweet = (f"""
+        tweet = (f"""
 :Canada: {rised} {emoji_reaction} - R${price} às {dollar_info['check_time']}  
         
 {reaction}
 
 Variação {chart} {sign} {abs(float(dollar_info['pctChange']))}% (R${abs(float(price_rised))})""")
 
-            emojis_tweet = emoji.emojize(tweet, use_aliases=True)
+        emojis_tweet = emoji.emojize(tweet, use_aliases=True)
 
-            self.api.update_status(emojis_tweet)
+        return emojis_tweet
+
+    def send_tweet(self, tweet):
+        try:
+            self.api.update_status(tweet)
             print("Tweet enviado com sucesso!")
         except Exception as e:
             print(e)
             raise e
-
-
-if __name__ == "__main__":
-    # print("\N{grinning face}")
-    pass
